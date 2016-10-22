@@ -7,12 +7,142 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Search</ion-title>
+    <ion-title>Formulário de Pesquisa</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <!-- Form inputs list -->
+  <ion-list>
+    <br/>
 
+    <!-- Name -->
+    <ion-item>
+      <ion-label>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <br/>
+
+    <!-- Father's name -->
+    <ion-item>
+      <ion-label>Nome do pai</ion-label>
+      <ion-input type="text" [(ngModel)]="father"></ion-input>
+    </ion-item>
+    <br/>
+
+    <!-- Mother's name -->
+    <ion-item>
+      <ion-label>Nome da mãe</ion-label>
+      <ion-input type="text" [(ngModel)]="mother"></ion-input>
+    </ion-item>
+    <br/>
+
+    <!-- Gender -->
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select [(ngModel)]="sex">
+        <ion-option value="1">Masculino</ion-option>
+        <ion-option value="2">Feminino</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Age -->
+    <ion-item>
+      <ion-label>Idade aparente</ion-label>
+      <ion-select [(ngModel)]="age">
+        <ion-option value="1">até 18 anos</ion-option>
+        <ion-option value="2">de 19 até 30 anos</ion-option>
+        <ion-option value="3">de 31 até 45 anos</ion-option>
+        <ion-option value="4">de 46 até 65 anos</ion-option>
+        <ion-option value="5">mais de 65 anos</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Height -->
+    <ion-item>
+      <ion-label>Altura (em metros)</ion-label>
+      <ion-select [(ngModel)]="height">
+        <ion-option value="1">Anão</ion-option>
+        <ion-option value="2">até 1,60</ion-option>
+        <ion-option value="3">de 1,60 até 1,70</ion-option>
+        <ion-option value="4">de 1,70 até 1,80</ion-option>
+        <ion-option value="5">acima 1,80</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Skin color -->
+    <ion-item>
+      <ion-label>Cor da pele</ion-label>
+      <ion-select [(ngModel)]="skin">
+        <ion-option value="1">Albino</ion-option>
+        <ion-option value="2">Amarela</ion-option>
+        <ion-option value="3">Branca</ion-option>
+        <ion-option value="4">Negra</ion-option>
+        <ion-option value="5">Parda</ion-option>
+        <ion-option value="6">Vermelha</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Hair color -->
+    <ion-item>
+      <ion-label>Cor do cabelo</ion-label>
+      <ion-select [(ngModel)]="hair">
+        <ion-option value="1">Aço</ion-option>
+        <ion-option value="2">Branco</ion-option>
+        <ion-option value="3">Castanho Claro</ion-option>
+        <ion-option value="4">Castanho Escuro</ion-option>
+        <ion-option value="5">Com mexas ou faixas</ion-option>
+        <ion-option value="6">Louro</ion-option>
+        <ion-option value="7">Preto</ion-option>
+        <ion-option value="8">Ruivo</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Eyes color -->
+    <ion-item>
+      <ion-label>Cor do cabelo</ion-label>
+      <ion-select [(ngModel)]="eyes">
+        <ion-option value="1">Azuis</ion-option>
+        <ion-option value="2">Castanhos claros</ion-option>
+        <ion-option value="3">Castanhos escuros</ion-option>
+        <ion-option value="4">Cinzentos</ion-option>
+        <ion-option value="5">Desiguais na cor</ion-option>
+        <ion-option value="6">Pretos</ion-option>
+        <ion-option value="7">Verdes</ion-option>
+        <ion-option value="8">Violetas</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Physical specificity -->
+    <ion-item>
+      <ion-label>Característica física</ion-label>
+      <ion-select [(ngModel)]="specificity">
+        <ion-option value="1">Tatuagem</ion-option>
+        <ion-option value="2">Cicatriz</ion-option>
+        <ion-option value="3">Amputação</ion-option>
+        <ion-option value="4">Deficiência</ion-option>
+        <ion-option value="">Nenhum</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <!-- Submit button -->
+  <div padding>
+    <!-- <button class="start-button" (click)="goToSearch()">Buscar</button> -->
+    <button class="start-button">Buscar</button>
+  </div>
 </ion-content>
