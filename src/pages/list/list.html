@@ -7,20 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>List</ion-title>
+    <ion-title>Resultados da busca</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-LISTA COMPLETA
   <ion-card *ngFor="let person of people">
-    <ion-card-header>
-      {{ person.id }}
-    </ion-card-header>
+  
+    <img src="{{ getImage(person) }}" style="max-height: 425px;max-width: 325px;" />
     <ion-card-content>
-      {{ person.name }}
+      <ion-card-title>  
+        {{ person.name }}
+      </ion-card-title>
     </ion-card-content>
+
   </ion-card>
 </ion-content>

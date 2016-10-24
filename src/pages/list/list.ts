@@ -28,6 +28,10 @@ export class List {
     );
   }
 
+  getImage(person) {
+    return `http://162.243.118.247${person.photo.url}`;
+  }
+
   ionViewDidLoad() {
     console.log('Hello List Page');
   }
