@@ -3,13 +3,15 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Search } from '../pages/search/search';
-
+import { List } from '../pages/list/list';
+import { WebApiService } from '../providers/web-api-service';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    Search
+    Search,
+    List
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,8 +20,9 @@ import { Search } from '../pages/search/search';
   entryComponents: [
     MyApp,
     HomePage,
-    Search
+    Search,
+    List
   ],
-  providers: []
+  providers: [WebApiService]
 })
 export class AppModule {}
