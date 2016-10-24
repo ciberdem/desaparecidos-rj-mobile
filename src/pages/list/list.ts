@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { WebApiService } from '../../providers/web-api-service';
+import { Details } from '../details/details'; 
 
 /*
   Generated class for the List page.
@@ -28,11 +29,15 @@ export class List {
     );
   }
 
+  ionViewDidLoad() {
+    console.log('Hello List Page');
+  }
+
   getImage(person) {
     return `http://162.243.118.247${person.photo.url}`;
   }
 
-  ionViewDidLoad() {
-    console.log('Hello List Page');
+  goToDetails(person) {
+    this.navCtrl.push(Details, { person: person });
   }
 }
