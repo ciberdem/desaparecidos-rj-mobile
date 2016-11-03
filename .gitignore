@@ -32,3 +32,15 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+# Rvm config
+.rvmrc
+
+# Byebug log
+.byebug_history
+
+# Rspec config
+.rspec
+
+# Capybara html files
+capybara-*
