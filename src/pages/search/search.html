@@ -13,35 +13,35 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-color: #040809;">
   <!-- Form inputs list -->
-  <ion-list>
+  <ion-list insert>
     <br/>
 
     <!-- Name -->
-    <ion-item>
-      <ion-label>Nome</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Nome</ion-label>
       <ion-input type="text" [(ngModel)]="name"></ion-input>
     </ion-item>
     <br/>
 
     <!-- Father's name -->
-    <ion-item>
-      <ion-label>Nome do pai</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Nome do pai</ion-label>
       <ion-input type="text" [(ngModel)]="father"></ion-input>
     </ion-item>
     <br/>
 
     <!-- Mother's name -->
-    <ion-item>
-      <ion-label>Nome da mãe</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Nome da mãe</ion-label>
       <ion-input type="text" [(ngModel)]="mother"></ion-input>
     </ion-item>
     <br/>
 
     <!-- Gender -->
-    <ion-item>
-      <ion-label>Sexo</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Sexo</ion-label>
       <ion-select [(ngModel)]="sex">
         <ion-option value="1">Masculino</ion-option>
         <ion-option value="2">Feminino</ion-option>
@@ -51,8 +51,8 @@
     <br/>
 
     <!-- Age -->
-    <ion-item>
-      <ion-label>Idade aparente</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Idade aparente</ion-label>
       <ion-select [(ngModel)]="age">
         <ion-option value="1">até 18 anos</ion-option>
         <ion-option value="2">de 19 até 30 anos</ion-option>
@@ -65,8 +65,8 @@
     <br/>
 
     <!-- Height -->
-    <ion-item>
-      <ion-label>Altura (em metros)</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Altura (em metros)</ion-label>
       <ion-select [(ngModel)]="height">
         <ion-option value="1">Anão</ion-option>
         <ion-option value="2">até 1,60</ion-option>
@@ -79,8 +79,8 @@
     <br/>
 
     <!-- Skin color -->
-    <ion-item>
-      <ion-label>Cor da pele</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Cor da pele</ion-label>
       <ion-select [(ngModel)]="skin">
         <ion-option value="1">Albino</ion-option>
         <ion-option value="2">Amarela</ion-option>
@@ -94,8 +94,8 @@
     <br/>
 
     <!-- Hair color -->
-    <ion-item>
-      <ion-label>Cor do cabelo</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Cor do cabelo</ion-label>
       <ion-select [(ngModel)]="hair">
         <ion-option value="1">Aço</ion-option>
         <ion-option value="2">Branco</ion-option>
@@ -111,8 +111,8 @@
     <br/>
 
     <!-- Eyes color -->
-    <ion-item>
-      <ion-label>Cor do olhos</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Cor dos olhos</ion-label>
       <ion-select [(ngModel)]="eyes">
         <ion-option value="1">Azuis</ion-option>
         <ion-option value="2">Castanhos claros</ion-option>
@@ -128,8 +128,8 @@
     <br/>
 
     <!-- Physical specificity -->
-    <ion-item>
-      <ion-label>Característica física</ion-label>
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+      <ion-label style="background-color: #040809; color: #F7CC38;">Característica física</ion-label>
       <ion-select [(ngModel)]="specificity">
         <ion-option value="1">Tatuagem</ion-option>
         <ion-option value="2">Cicatriz</ion-option>
@@ -142,6 +142,6 @@
 
   <!-- Submit button -->
   <div padding>
-    <button class="start-button" (click)="getPeople()">Buscar</button>
+    <button class="start-button search-button" (click)="getPeople()">Buscar</button>
   </div>
 </ion-content>

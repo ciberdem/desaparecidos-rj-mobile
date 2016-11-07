@@ -13,50 +13,50 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
+<ion-content padding style="background-color: #040809;">
+  <ion-card style="border: 1px solid #ead083; background-color: #040809;">
   
     <img src="{{ photoUrl }}" style="max-height: 425px;max-width: 325px;" />
     <ion-card-content>
-      <ion-card-title>  
+      <ion-card-title style="color: #F7CC38;text-align: center;">  
         {{ person.name }}
       </ion-card-title>
 
         <hr/>
-        <p><b>Local de desaparecimento</b>: {{ person.place }}</p>
+        <p style="color: #F7CC38;"><b>Local de desaparecimento</b>: {{ person.place }}</p>
 
         <hr/>
-        <p><b>Data de desaparecimento</b>: {{ person.missingDate }}</p>
+        <p style="color: #F7CC38;"><b>Data de desaparecimento</b>: {{ person.missingDate }}</p>
 
         <hr/>
-        <p><b>Sexo</b>: {{ person.sex }}</p>
+        <p style="color: #F7CC38;"><b>Sexo</b>: {{ person.sex }}</p>
 
         <hr/>
-        <p><b>Idade</b>: {{ person.sex }}</p>
+        <p style="color: #F7CC38;"><b>Idade</b>: {{ person.sex }}</p>
 
         <hr/>
-        <p><b>Altura</b>: {{ person.height }}</p>
+        <p style="color: #F7CC38;"><b>Altura</b>: {{ person.height }}</p>
 
         <hr/>
-        <p><b>Nome do pai</b>: {{ person.father }}</p>
+        <p style="color: #F7CC38;"><b>Nome do pai</b>: {{ person.father }}</p>
 
         <hr/>
-        <p><b>Nome do mãe</b>: {{ person.mother }}</p>
+        <p style="color: #F7CC38;"><b>Nome do mãe</b>: {{ person.mother }}</p>
 
         <hr/>
-        <p><b>Cor da pele</b>: {{ person.skin }}</p>
+        <p style="color: #F7CC38;"><b>Cor da pele</b>: {{ person.skin }}</p>
 
         <hr/>
-        <p><b>Cor do cabelo</b>: {{ person.hair }}</p>
+        <p style="color: #F7CC38;"><b>Cor do cabelo</b>: {{ person.hair }}</p>
 
         <hr/>
-        <p><b>Cor dos olhos</b>: {{ person.eyes }}</p>
+        <p style="color: #F7CC38;"><b>Cor dos olhos</b>: {{ person.eyes }}</p>
 
         <hr/>
-        <p><b>Característica fïsica</b>: {{ person.specificity }}</p>
+        <p style="color: #F7CC38;"><b>Característica fïsica</b>: {{ person.specificity }}</p>
         <br/>
 
-      <button ion-button (click)="generatePoster()">Gerar cartazete</button>
+      <button ion-button style="background-color: #F7CC38; color: #040809;display: block;margin: auto;border-radius: 10px;" (click)="generatePoster(person)">Gerar cartazete</button>
     </ion-card-content>
 
   </ion-card>

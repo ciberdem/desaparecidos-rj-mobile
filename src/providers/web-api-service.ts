@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -16,7 +16,10 @@ export class WebApiService {
   }
 
   searchPeople(paramsUrl) {
-    let people = this.http.get('http://162.243.118.247/pesquisa');
-    return people;
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json, */*');
+
+    return this.http.get(`http://162.243.118.247/pesquisa${paramsUrl}`, { headers: headers });
   }
 }

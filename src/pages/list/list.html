@@ -13,16 +13,22 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card *ngFor="let person of people">
+<ion-content padding style="background-color: #040809;">
+  <ion-card *ngFor="let person of people" style="padding: 3%;background-color: #040809;">
   
-    <img src="{{ getImage(person) }}" style="max-height: 425px;max-width: 325px;" />
-    <ion-card-content>
-      <ion-card-title>  
-        {{ person.name }}
-      </ion-card-title>
-      <button ion-button (click)="goToDetails(person)">+ Informações</button>
-    </ion-card-content>
+    <div style="border: 1px solid #ead083;padding: 15px;">
+ 
+      <img src="{{ getImage(person) }}" style="max-height: 425px;max-width: 325px;" />
+      <ion-card-content>
+        <ion-card-title style="color: #F7CC38;text-align: center;">  
+          {{ person.name }}
+        </ion-card-title>
+        <br/>
+        <button ion-button style="background-color: #F7CC38; color: #040809;display: block;margin: auto;border-radius: 10px;" (click)="goToDetails(person)">+ Informações</button>
+      </ion-card-content>
 
+    </div>
+
+    <hr />
   </ion-card>
 </ion-content>

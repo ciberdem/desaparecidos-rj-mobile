@@ -1,32 +1,27 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Poster } from '../poster/poster';
 
 /*
-  Generated class for the Details page.
+  Generated class for the Poster page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-details',
-  templateUrl: 'details.html',
-  entryComponents: [Poster]
+  selector: 'page-poster',
+  templateUrl: 'poster.html'
 })
-export class Details {
+export class Poster {
   public person;
-  public photoUrl;
+  public posterUrl;
 
   constructor(public navCtrl: NavController, private navParams: NavParams) {
     this.person = navParams.get('person');
-    this.photoUrl = `http://162.243.118.247${this.person.photo.url}`;
+    this.posterUrl = `http://162.243.118.247${this.person.poster.url}`;
   }
 
   ionViewDidLoad() {
-    console.log('Hello Details Page');
+    console.log('Hello Poster Page');
   }
 
-  generatePoster(person) {
-    this.navCtrl.push(Poster, { person: person });
-  }
 }
