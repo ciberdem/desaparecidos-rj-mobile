@@ -127,19 +127,60 @@
     </ion-item>
     <br/>
 
-    <!-- Physical specificity -->
+    <!-- Physical type -->
     <ion-item style="background-color: #040809; color: #F7CC38;">
-      <ion-label style="background-color: #040809; color: #F7CC38;">Característica física</ion-label>
-      <ion-select [(ngModel)]="specificity">
-        <ion-option value="1">Tatuagem</ion-option>
-        <ion-option value="2">Cicatriz</ion-option>
-        <ion-option value="3">Amputação</ion-option>
-        <ion-option value="4">Deficiência</ion-option>
+      <ion-label style="background-color: #040809; color: #F7CC38;">Tipo físico</ion-label>
+      <ion-select [(ngModel)]="physical">
+        <ion-option value="1">Magro</ion-option>
+        <ion-option value="2">Normal</ion-option>
+        <ion-option value="3">Gordo</ion-option>
+        <ion-option value="4">Forte</ion-option>
         <ion-option value="">Nenhum</ion-option>
       </ion-select>
     </ion-item>
-  </ion-list>
+    <br/>
 
+    <!-- Tattoo -->
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+    <ion-label style="background-color: #040809; color: #F7CC38;">Tatuagem</ion-label>
+      <ion-select [(ngModel)]="tattoo" placeholder="Não">
+        <ion-option value="1">Sim</ion-option>
+        <ion-option value="0">Não</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Scar -->
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+    <ion-label style="background-color: #040809; color: #F7CC38;">Cicatriz</ion-label>
+      <ion-select [(ngModel)]="scar" placeholder="Não">
+        <ion-option value="1">Sim</ion-option>
+        <ion-option value="0">Não</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Amputee -->
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+    <ion-label style="background-color: #040809; color: #F7CC38;">Amputado</ion-label>
+      <ion-select [(ngModel)]="amputee" placeholder="Não">
+        <ion-option value="1">Sim</ion-option>
+        <ion-option value="0">Não</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+    <!-- Deficiente -->
+    <ion-item style="background-color: #040809; color: #F7CC38;">
+    <ion-label style="background-color: #040809; color: #F7CC38;">Deficiente</ion-label>
+      <ion-select [(ngModel)]="disabled" placeholder="Não">
+        <ion-option value="1">Sim</ion-option>
+        <ion-option value="0">Não</ion-option>
+      </ion-select>
+    </ion-item>
+    <br/>
+
+  </ion-list>
   <!-- Submit button -->
   <div padding>
     <button class="start-button search-button" (click)="getPeople()">Buscar</button>

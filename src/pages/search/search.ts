@@ -14,7 +14,7 @@ import { List } from '../list/list';
   entryComponents: [List]
 })
 export class Search {
-  public name; father; mother; sex; age; height; skin; hair; eyes; specificity;
+  public name; father; mother; sex; age; height; skin; hair; eyes; physical; tattoo; scar; amputee; disabled;
 
   constructor(public navCtrl: NavController) {}
 
@@ -24,11 +24,12 @@ export class Search {
 
   // Get paramters passed by form inputs and mount url to call API
   mountParamsUrl() {
-    return `?name=${this.name}&father=${this.father}&mother=${this.mother}&sex=${this.sex}&age=${this.age}&height=${this.height}&skin=${this.skin}&hair=${this.hair}&eyes=${this.eyes}&specificity=${this.specificity}`;
+    return `?name=${this.name}&father=${this.father}&mother=${this.mother}&sex=${this.sex}&age=${this.age}&height=${this.height}&skin=${this.skin}&hair=${this.hair}&eyes=${this.eyes}&physical=${this.physical}&tattoo=${this.tattoo}&scar=${this.scar}&amputee=${this.amputee}&disabled=${this.disabled}`;
   }
 
   // Send mounted url to be called in API by next page
   getPeople() {
+    console.log(this.mountParamsUrl());
     this.navCtrl.push(List, { paramsUrl: this.mountParamsUrl() });       
   }
 }

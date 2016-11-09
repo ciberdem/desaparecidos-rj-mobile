@@ -26,16 +26,16 @@
         <p style="color: #F7CC38;"><b>Local de desaparecimento</b>: {{ person.place }}</p>
 
         <hr/>
-        <p style="color: #F7CC38;"><b>Data de desaparecimento</b>: {{ person.missingDate }}</p>
+        <p style="color: #F7CC38;"><b>Data de desaparecimento</b>: {{ person.missing_date | date: 'dd/MM/yyyy' }}</p>
 
         <hr/>
         <p style="color: #F7CC38;"><b>Sexo</b>: {{ person.sex }}</p>
 
         <hr/>
-        <p style="color: #F7CC38;"><b>Idade</b>: {{ person.sex }}</p>
+        <p style="color: #F7CC38;"><b>Idade</b>: {{ person.age }} anos</p>
 
         <hr/>
-        <p style="color: #F7CC38;"><b>Altura</b>: {{ person.height }}</p>
+        <p style="color: #F7CC38;"><b>Altura (em metros)</b>: {{ person.height }}</p>
 
         <hr/>
         <p style="color: #F7CC38;"><b>Nome do pai</b>: {{ person.father }}</p>
@@ -53,9 +53,21 @@
         <p style="color: #F7CC38;"><b>Cor dos olhos</b>: {{ person.eyes }}</p>
 
         <hr/>
-        <p style="color: #F7CC38;"><b>Característica fïsica</b>: {{ person.specificity }}</p>
-        <br/>
+        <p style="color: #F7CC38;"><b>Tipo físico</b>: {{ person.physical }}</p>
 
+        <hr/>
+        <p style="color: #F7CC38;"><b>Tatuagem</b>: {{ person.tattoo ? "Sim" : "Não" }}</p>
+
+        <hr/>
+        <p style="color: #F7CC38;"><b>Cicatriz</b>: {{ person.scar ? "Sim" : "Não"  }}</p>
+
+        <hr/>
+        <p style="color: #F7CC38;"><b>Amputado</b>: {{ person.amputee ? "Sim" : "Não"  }}</p>
+
+        <hr/>
+        <p style="color: #F7CC38;"><b>Deficiente</b>: {{ person.disabled ? "Sim" : "Não"  }}</p>
+
+        <br/>
       <button ion-button style="background-color: #F7CC38; color: #040809;display: block;margin: auto;border-radius: 10px;" (click)="generatePoster(person)">Gerar cartazete</button>
     </ion-card-content>
 
