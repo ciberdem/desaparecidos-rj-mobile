@@ -9,7 +9,7 @@
     "serve:before": "watch",
     "emulate:before": "build",
     "deploy:before": "build",
-    "build:before": "build",
+    "build:before": "watch",
     "run:before": "build"
   },
   "dependencies": {
@@ -44,11 +44,11 @@
     "cordova-plugin-x-socialsharing"
   ],
   "cordovaPlatforms": [
-    "ios",
+    "android",
     {
-      "platform": "ios",
+      "platform": "android",
       "version": "",
-      "locator": "ios"
+      "locator": "android"
     }
   ],
   "description": "missing-people-browser: An Ionic project"
