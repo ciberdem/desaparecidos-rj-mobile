@@ -2,7 +2,6 @@ require 'spec_helper'
 require 'capybara/rspec'
 require 'capybara/dsl'
 require 'byebug'
-require 'webmock/rspec'
 
 RSpec.configure do |config|
   config.include Capybara::DSL
@@ -14,5 +13,3 @@ Capybara.configure do |config|
   config.server_port = 8100
   config.app_host = "http://localhost:#{Capybara.server_port}"
 end
-
-WebMock.disable_net_connect!(allow: 'localhost:8100')

@@ -13,6 +13,3 @@ gem 'selenium-webdriver', '~> 3.0.0'
 
 # Open debugging page
 gem 'launchy', '~> 2.4.3'
-
-# Stubbing requests
-gem 'webmock', '~> 2.1.0'
