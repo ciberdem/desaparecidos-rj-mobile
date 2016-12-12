@@ -6,6 +6,7 @@ import { Search } from '../pages/search/search';
 import { List } from '../pages/list/list';
 import { Details } from '../pages/details/details';
 import { Poster } from '../pages/poster/poster';
+import { FailSearch } from '../pages/fail-search/fail-search';
 import { WebApiService } from '../providers/web-api-service';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { WebApiService } from '../providers/web-api-service';
     Search,
     List,
     Details,
-    Poster
+    Poster,
+    FailSearch
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import { WebApiService } from '../providers/web-api-service';
     Search,
     List,
     Details,
-    Poster
+    Poster,
+    FailSearch
   ],
   providers: [WebApiService]
 })

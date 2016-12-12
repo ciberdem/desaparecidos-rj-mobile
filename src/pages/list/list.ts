@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { WebApiService } from '../../providers/web-api-service';
 import { Details } from '../details/details'; 
+import { FailSearch } from '../fail-search/fail-search'; 
 
 /*
   Generated class for the List page.
@@ -25,7 +26,15 @@ export class List {
     this.webapi.searchPeople(this.paramsUrl).subscribe(
       data => this.people = data.json(),
       err => console.error(JSON.stringify(err)),
-      () => console.log('success called api')
+      () => {
+        console.log('success called api');
+
+        if (JSON.stringify(this.people) == "[]"){
+          console.log('Empty search - render fail search page');
+          this.navCtrl.pop();
+          this.navCtrl.push(FailSearch);
+        }
+      }
     );
   }
 
